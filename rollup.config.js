@@ -16,6 +16,7 @@ export default {
       format: 'cjs',
       exports: 'named',
       sourcemap: true,
+      plugins: [terser()],
     },
     {
       file: `dist/${outputName}.esm.js`,
@@ -33,13 +34,13 @@ export default {
         react: 'React',
         'react-dom': 'ReactDOM',
       },
+      plugins: [terser()],
     },
   ],
   plugins: [
     postcss({
-      extract: path.resolve(`./dist/${outputName}.css`),
-      modules: true,
+      extract: path.resolve('./dist/styles.css'),
+      modules: false,
     }),
-    terser(),
   ],
 };
