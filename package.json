@@ -2,7 +2,7 @@
   "name": "@akiijadhav/rdkk-component-lib",
   "repository": {
     "type": "git",
-    "url": "https://github.com/OWNER/REPO.git"
+    "url": "https://github.com/akiijadhav/rdkk-component-library.git"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
