@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Header } from '../components/Header';
+import Header, { HeaderProps } from '../components/Header';
 
 const meta = {
   title: 'Example/Header',
@@ -13,6 +13,7 @@ const meta = {
 } satisfies Meta<typeof Header>;
 
 export default meta;
+export type { HeaderProps }; // Re-export ButtonProps
 type Story = StoryObj<typeof meta>;
 
 export const LoggedIn: Story = {
