@@ -10,6 +10,7 @@
   "version": "1.0.3",
   "description": "",
   "main": "dist/index.js",
+  "module": "dist/rdkk-component-library.esm.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist",
@@ -18,7 +19,7 @@
     "README.md"
   ],
   "scripts": {
-    "build": "tsc && copyfiles -u 1 \"src/**/*.css\" dist",
+    "build": "rollup -c",
     "prepare": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "storybook dev -p 6006",
@@ -48,6 +49,7 @@
     "@storybook/testing-library": "^0.0.14-next.2",
     "copyfiles": "^2.4.1",
     "prop-types": "^15.8.1",
+    "rollup": "^3.20.2",
     "storybook": "^7.0.4"
   }
 }
