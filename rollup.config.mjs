@@ -3,6 +3,7 @@ import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import { terser } from 'rollup-plugin-terser';
+import postcss from 'rollup-plugin-postcss';
 
 export default {
   input: 'src/index.ts',
@@ -23,6 +24,7 @@ export default {
     resolve(),
     commonjs(),
     typescript({ useTsconfigDeclarationDir: true }),
+    postcss({ extract: true, config: './postcss.config.cjs' }),
     terser(),
   ],
   external: ['react', 'react-dom'],
