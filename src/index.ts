@@ -1,1 +1,1 @@
-export { default as Button } from '../src/stories/Button';
+export { default as Button } from './components/Button';
