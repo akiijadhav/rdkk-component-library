@@ -24,7 +24,7 @@ export default {
     resolve(),
     commonjs(),
     typescript({ useTsconfigDeclarationDir: true }),
-    postcss({ extract: 'dist/styles.min.css', minimize: true }),
+    postcss({ extract: 'styles.min.css', minimize: true }),
     terser(),
   ],
   external: ['react', 'react-dom'],
